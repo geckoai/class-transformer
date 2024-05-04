@@ -24,7 +24,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ClassTransformer = void 0;
-var class_mirror_1 = require("@quick-toolkit/class-mirror");
+var class_mirror_1 = require("@geckoai/class-mirror");
 var plugins = __importStar(require("../plugins"));
 var plugins_1 = require("../plugins");
 var type_mirror_1 = require("../type-mirror");

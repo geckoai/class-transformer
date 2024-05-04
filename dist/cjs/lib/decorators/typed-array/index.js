@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.TypedArray = void 0;
-var class_mirror_1 = require("@quick-toolkit/class-mirror");
+var class_mirror_1 = require("@geckoai/class-mirror");
 var type_mirror_1 = require("../../type-mirror");
 var typed_metadata_1 = require("../../typed-metadata");
 var typed_decorate_1 = require("../../typed-decorate");

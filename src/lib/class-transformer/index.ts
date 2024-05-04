@@ -1,6 +1,6 @@
 /**
  * MIT License
- * Copyright (c) 2021 RanYunLong<549510622@qq.com> quick-toolkit/class-transformer
+ * Copyright (c) 2021 RanYunLong<549510622@qq.com> @geckoai/class-transformer
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -24,7 +24,7 @@ import {
   ClassConstructor,
   ClassMirror,
   ParameterMirror,
-} from '@quick-toolkit/class-mirror';
+} from '@geckoai/class-mirror';
 import { TransformPluginConstructor } from '../transform-plugin';
 import * as plugins from '../plugins';
 import { ToObjectPlugin } from '../plugins';

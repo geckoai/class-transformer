@@ -16,7 +16,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.TypedDecorate = void 0;
-var class_mirror_1 = require("@quick-toolkit/class-mirror");
+var class_mirror_1 = require("@geckoai/class-mirror");
 var TypedDecorate = (function (_super) {
     __extends(TypedDecorate, _super);
     function TypedDecorate() {

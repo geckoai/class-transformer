@@ -1,6 +1,6 @@
 /**
  * MIT License
- * Copyright (c) 2021 RanYunLong<549510622@qq.com> quick-toolkit/class-transformer
+ * Copyright (c) 2021 RanYunLong<549510622@qq.com> @geckoai/class-transformer
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -19,9 +19,9 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
+/// <reference types="validator" />
 import { TypeMirror } from '../type-mirror';
-import { ClassConstructor } from '@quick-toolkit/class-mirror';
-import validator from 'validator';
+import { ClassConstructor } from '@geckoai/class-mirror';
 import { IsEmailOptions } from 'validator/lib/isEmail';
 import { IsMobilePhoneOptions } from 'validator/lib/isMobilePhone';
 import MobilePhoneLocale = validator.MobilePhoneLocale;

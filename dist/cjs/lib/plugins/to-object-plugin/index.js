@@ -17,7 +17,7 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ToObjectPlugin = void 0;
 var transform_plugin_1 = require("../../transform-plugin");
-var class_mirror_1 = require("@quick-toolkit/class-mirror");
+var class_mirror_1 = require("@geckoai/class-mirror");
 var typed_decorate_1 = require("../../typed-decorate");
 var utils_1 = require("../../utils");
 var exceptions_1 = require("../../exceptions");

@@ -1,6 +1,6 @@
 /**
  * MIT License
- * Copyright (c) 2021 RanYunLong<549510622@qq.com> quick-toolkit/class-transformer
+ * Copyright (c) 2021 RanYunLong<549510622@qq.com> @geckoai/class-transformer
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -20,7 +20,7 @@
  * SOFTWARE.
  */
 
-import { PropertyMirror } from '@quick-toolkit/class-mirror';
+import { PropertyMirror } from '@geckoai/class-mirror';
 import { TypeMirror } from '../../type-mirror';
 import { TypedMetadata, TypedMetadataOptions } from '../../typed-metadata';
 import { TypedDecorate } from '../../typed-decorate';

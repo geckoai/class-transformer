@@ -1,6 +1,6 @@
 {
-  "name": "@quick-toolkit/class-transformer",
-  "version": "1.0.6",
+  "name": "@geckoai/class-transformer",
+  "version": "1.0.0",
   "description": "The class-transformer is used to convert a plain object to a class instance.",
   "main": "dist/cjs",
   "types": "dist/types",
@@ -15,20 +15,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/quick-toolkit/class-transformer.git"
+    "url": "git+https://github.com/geckoai/class-transformer.git"
   },
   "keywords": [
-    "quicker",
-    "quick-toolkit",
-    "http",
-    "axios"
+    "geckoai",
+    "class",
+    "class transformer"
   ],
   "author": "RanYunLong<549510622@qq.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/quick-toolkit/class-transformer/issues"
+    "url": "https://github.com/geckoai/class-transformer/issues"
   },
-  "homepage": "https://github.com/quick-toolkit/class-transformer#readme",
+  "homepage": "https://github.com/geckoai/class-transformer#readme",
   "devDependencies": {
     "@babel/core": "^7.16.0",
     "@babel/preset-env": "^7.16.4",
@@ -57,7 +56,7 @@
     "webpack-cli": "^4.9.1"
   },
   "dependencies": {
-    "@quick-toolkit/class-mirror": "^1.0.5",
+    "@geckoai/class-mirror": "^1.0.0",
     "@types/validator": "^13.7.1",
     "async-validator": "^4.0.7",
     "validator": "^13.7.0"
