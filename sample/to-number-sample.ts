@@ -27,7 +27,12 @@ export class ToNumberSample {
    */
   @Typed(Number, {
     rules: { type: 'Integer' },
-    transform: (values) => Number(values),
   })
   public age4: number;
+
+  @Typed(Boolean, { nullable: true })
+  public is?: boolean;
+
+  @Typed(String, { nullable: true })
+  public name?: string;
 }

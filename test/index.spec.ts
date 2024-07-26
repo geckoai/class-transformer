@@ -33,12 +33,43 @@ describe('index.spec.ts', () => {
   it('should optional ToNumberSample', () => {
     const res = transformer.transform(ToNumberSample, {
       id: 1,
+      is: null,
     });
     assert.equal(res.id, 1);
     assert.equal(res.age1, undefined);
     assert.equal(res.age2, undefined);
     assert.equal(res.age3, undefined);
     assert.equal(res.age4, undefined);
+    assert.equal(res.name, undefined);
+    assert.equal(res.is, null);
+  });
+
+  it('should optional ToNumberSample', () => {
+    const res = transformer.transform(ToNumberSample, {
+      id: 1,
+      name: null,
+    });
+    assert.equal(res.id, 1);
+    assert.equal(res.age1, undefined);
+    assert.equal(res.age2, undefined);
+    assert.equal(res.age3, undefined);
+    assert.equal(res.age4, undefined);
+    assert.equal(res.name, null);
+    assert.equal(res.is, undefined);
+  });
+
+  it('should optional ToNumberSample', () => {
+    const res = transformer.transform(ToNumberSample, {
+      id: 1,
+      name: '',
+    });
+    assert.equal(res.id, 1);
+    assert.equal(res.age1, undefined);
+    assert.equal(res.age2, undefined);
+    assert.equal(res.age3, undefined);
+    assert.equal(res.age4, undefined);
+    assert.equal(res.name, '');
+    assert.equal(res.is, undefined);
   });
 
   it('should ToArraySample 1', () => {
