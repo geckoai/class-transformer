@@ -58,7 +58,6 @@
   "dependencies": {
     "@geckoai/class-mirror": "^1.0.0",
     "@types/validator": "^13.7.1",
-    "async-validator": "^4.0.7",
     "validator": "^13.7.0"
   }
 }

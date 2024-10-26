@@ -25,5 +25,9 @@ module.exports = {
       }
     ]
   },
+  externals: {
+    "@geckoai/class-mirror": "ClassMirror",
+    "validator": "Validator"
+  },
   target: ["web", "es5"]
 };
