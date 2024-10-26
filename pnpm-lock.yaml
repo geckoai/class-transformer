@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@geckoai/class-mirror':
-        specifier: ^1.0.0
-        version: 1.0.0
+        specifier: ^1.0.1
+        version: 1.0.1
       '@types/validator':
         specifier: ^13.7.1
         version: 13.11.10
@@ -685,8 +685,8 @@ packages:
     resolution: {integrity: sha512-J6KFFz5QCYUJq3pf0mjEcCJVERbzv71PUIDczuh9JkwGEzced6CO5ADLHB1rbf/+oPBtoPfMYNOpGDzCANlbXw==}
     engines: {node: ^10.12.0 || >=12.0.0}
 
-  '@geckoai/class-mirror@1.0.0':
-    resolution: {integrity: sha512-j/JNOUr21xWRTCVOAYdXbHo7tMm3Wm8DdjaiYmmkKVr/kcDes8wjRAkGytU7Whp48f5XsKz4s0P6IKsnWvTPug==}
+  '@geckoai/class-mirror@1.0.1':
+    resolution: {integrity: sha512-fc9ns5Hlm+muePMSKN7CCDiHNHb/ZaQLoDWva/CxnQjm4CdDG3u6C72ts+YtXfozkQmP5nCJPtt/MsVkNtCegw==}
 
   '@humanwhocodes/config-array@0.5.0':
     resolution: {integrity: sha512-FagtKFz74XrTl7y6HCzQpwDfXP0yhxe9lHLD1UZxjvZIcbyRz8zTFF/yYNfSfzU414eDwZ1SrO0Qvtyf+wFMQg==}
@@ -2856,7 +2856,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@geckoai/class-mirror@1.0.0': {}
+  '@geckoai/class-mirror@1.0.1': {}
 
   '@humanwhocodes/config-array@0.5.0':
     dependencies:
