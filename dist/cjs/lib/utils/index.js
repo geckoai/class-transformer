@@ -1,10 +1,6 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Utils = void 0;
-var moment_1 = __importDefault(require("moment"));
 var Utils = (function () {
     function Utils() {
     }
@@ -125,9 +121,6 @@ var Utils = (function () {
     };
     Utils.toDate = function (value, strict) {
         if (strict === void 0) { strict = false; }
-        if (moment_1.default.isMoment(value)) {
-            return value.toDate();
-        }
         if (typeof value === 'string' ||
             typeof value === 'number' ||
             value instanceof String ||
