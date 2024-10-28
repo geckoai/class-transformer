@@ -55,7 +55,7 @@
     "webpack-cli": "^4.9.1"
   },
   "dependencies": {
-    "@geckoai/class-mirror": "workspace:*",
+    "@geckoai/class-mirror": "1.0.2",
     "@types/validator": "^13.7.1",
     "validator": "^13.7.0"
   }
