@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.TypedSet = void 0;
+exports.TypedSet = TypedSet;
 var class_mirror_1 = require("@geckoai/class-mirror");
 var type_mirror_1 = require("../../type-mirror");
 var typed_metadata_1 = require("../../typed-metadata");
@@ -21,4 +21,3 @@ function TypedSet() {
     }
     return class_mirror_1.PropertyMirror.createDecorator(new typed_decorate_1.TypedDecorate(typed_metadata_1.TypedMetadata.create(a instanceof type_mirror_1.TypeMirror ? a : type_mirror_1.TypeMirror.createSetMirror(a), b)));
 }
-exports.TypedSet = TypedSet;

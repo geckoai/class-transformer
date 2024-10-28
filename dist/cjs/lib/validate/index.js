@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.validate = void 0;
+exports.validate = validate;
 var exceptions_1 = require("../exceptions");
 function validate(field, fieldValue, validators) {
     for (var _i = 0, validators_1 = validators; _i < validators_1.length; _i++) {
@@ -33,4 +33,3 @@ function validate(field, fieldValue, validators) {
         }
     }
 }
-exports.validate = validate;

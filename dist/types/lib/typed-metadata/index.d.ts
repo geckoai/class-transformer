@@ -19,7 +19,6 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-/// <reference types="validator" />
 import { TypeMirror } from '../type-mirror';
 import { ClassConstructor } from '@geckoai/class-mirror';
 import { IsEmailOptions } from 'validator/lib/isEmail';
@@ -42,7 +41,7 @@ import { UUIDVersion } from 'validator/lib/isUUID';
  * @class TypedMetadata
  */
 export declare class TypedMetadata<T = any> {
-    type?: TypeMirror<any, any> | undefined;
+    type?: TypeMirror | undefined;
     options?: TypedMetadataOptions<T> | undefined;
     /**
      * 合并规则
@@ -60,7 +59,7 @@ export declare class TypedMetadata<T = any> {
      * @param type 数据类型
      * @param options 验证规则
      */
-    constructor(type?: TypeMirror<any, any> | undefined, options?: TypedMetadataOptions<T> | undefined);
+    constructor(type?: TypeMirror | undefined, options?: TypedMetadataOptions<T> | undefined);
 }
 export interface RuleType {
     /**
