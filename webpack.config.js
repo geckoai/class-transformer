@@ -27,7 +27,8 @@ module.exports = {
   },
   externals: {
     "@geckoai/class-mirror": "ClassMirror",
-    "validator": "Validator"
+    "validator": "Validator",
+    "reflect-metadata": "Reflect"
   },
   target: ["web", "es5"]
 };

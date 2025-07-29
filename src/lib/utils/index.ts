@@ -21,7 +21,6 @@
  */
 
 import { Where } from '../type-mirror';
-import moment from 'moment';
 
 /**
  * 工具类
@@ -186,9 +185,6 @@ export class Utils {
    * @param strict
    */
   public static toDate = (value: any, strict = false): Date | undefined => {
-    if (moment.isMoment(value)) {
-      return value.toDate();
-    }
     if (
       typeof value === 'string' ||
       typeof value === 'number' ||
