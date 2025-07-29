@@ -30,6 +30,7 @@ import {
   ValidateExceptionFields,
 } from '../../exceptions';
 import { validate } from '../../validate';
+import * as process from 'node:process';
 
 /**
  * Object转换插件
@@ -81,15 +82,36 @@ export class ToObjectPlugin extends TransformPlugin {
     const allProperties = ClassMirror.reflect(type).getAllProperties();
     const newInstance = this.transformer.newInstance(type);
 
-    // 循环所有成员
+    // Loop all members
     allProperties.forEach((propertyMirror, propertyKey) => {
       let value = values[propertyKey];
       if (value === undefined) {
         value = newInstance[propertyKey];
       }
       const allDecorates = propertyMirror.getAllDecorates(TypedDecorate);
-      allDecorates.forEach((decorate) => {
+
+      allDecorates.forEach((decorate, i) => {
         const { metadata } = decorate;
+
+        // If the warning is not disabled
+        // Warn when multiple decorators are used in a field
+        if (
+          i > 0 &&
+          !this.transformer.ignoreWarn &&
+          !metadata.options?.ignoreWarn
+        ) {
+          if (
+            process?.env?.NODE_ENV &&
+            process.env.NODE_ENV === 'development'
+          ) {
+            console.warn(
+              `Member ${propertyKey.toString()} of class ${
+                type.name
+              } contains multiple decorators.`
+            );
+          }
+        }
+
         if (metadata) {
           const { options } = metadata;
           if (options) {
@@ -135,6 +157,7 @@ export class ToObjectPlugin extends TransformPlugin {
           }
         }
       });
+
       newInstance[propertyKey] = value;
     });
 

@@ -101,6 +101,8 @@ export class ClassTransformer {
     );
   }
 
+  public ignoreWarn = false;
+
   /**
    * 创建实例
    * @param options 实例选项参数
