@@ -9,8 +9,12 @@ export class ToNumberSample {
 
   @Typed(Number, {
     rules: 'Integer',
+    transform: v => Number(v),
   })
-  public age1: number;
+  @Typed(String, {
+    transform: v => String(v)
+  })
+  public age1: String;
 
   @Typed(Number, {
     rules: { type: 'Integer' },

@@ -1,6 +1,6 @@
 {
   "name": "@geckoai/class-transformer",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "The class-transformer is used to convert a plain object to a class instance.",
   "main": "dist/cjs",
   "types": "dist/types",

@@ -1,15 +1,13 @@
 import 'reflect-metadata';
 import { describe, it } from 'mocha';
 import { assert } from 'chai';
-import { ClassTransformer } from '../src';
 import {
-  ToArraySample,
-  ToFloatArraySample,
-  ToIntArraySample,
-  ToIntSetSample,
+  ToArraySample, ToFloatArraySample, ToIntArraySample, ToIntSetSample,
   ToNumberSample,
-} from '../sample';
+} from "../sample";
+import { ClassTransformer } from '../src';
 import * as uuid from 'uuid';
+
 
 const transformer = new ClassTransformer();
 
@@ -20,16 +18,21 @@ describe('index.spec.ts', () => {
       age1: 1,
       age2: 2,
       age3: 3,
-      age4: '4',
+      age4: 4,
     });
 
+    console.log(res)
+
     assert.equal(res.id, 1);
-    assert.equal(res.age1, 1);
+    assert.equal(res.age1, '1');
     assert.equal(res.age2, 2);
     assert.equal(res.age3, 3);
     assert.equal(res.age4, 4);
-  });
 
+    assert.equal(res.name, undefined);
+    assert.equal(res.is, undefined);
+  });
+  //
   it('should optional ToNumberSample', () => {
     const res = transformer.transform(ToNumberSample, {
       id: 1,
@@ -43,8 +46,8 @@ describe('index.spec.ts', () => {
     assert.equal(res.name, undefined);
     assert.equal(res.is, null);
   });
-
-  it('should optional ToNumberSample', () => {
+  //
+  it('should optional ToNumberSample null', () => {
     const res = transformer.transform(ToNumberSample, {
       id: 1,
       name: null,
@@ -57,8 +60,8 @@ describe('index.spec.ts', () => {
     assert.equal(res.name, null);
     assert.equal(res.is, undefined);
   });
-
-  it('should optional ToNumberSample', () => {
+  //
+  it('should optional ToNumberSample empty string', () => {
     const res = transformer.transform(ToNumberSample, {
       id: 1,
       name: '',
@@ -71,7 +74,7 @@ describe('index.spec.ts', () => {
     assert.equal(res.name, '');
     assert.equal(res.is, undefined);
   });
-
+  //
   it('should ToArraySample 1', () => {
     const res = transformer.transform(ToArraySample, {
       users: [],
@@ -82,7 +85,7 @@ describe('index.spec.ts', () => {
     assert.isArray(res.users);
     assert.lengthOf(res.users, 0);
   });
-
+  //
   it('should ToArraySample 2', () => {
     const res = transformer.transform(ToArraySample, {
       users: [{ id: 1, name: 'xx' }],
@@ -93,7 +96,7 @@ describe('index.spec.ts', () => {
     assert.isArray(res.users);
     assert.lengthOf(res.users, 1);
   });
-
+  //
   it('should ToArraySample 3', () => {
     const res = transformer.transform(ToArraySample, {
       users: [
@@ -107,16 +110,15 @@ describe('index.spec.ts', () => {
     assert.isArray(res.users);
     assert.lengthOf(res.users, 2);
   });
-
+  //
   it('should ToIntArraySample 1', () => {
     const res = transformer.transform(ToIntArraySample, {
       userIds: null,
     });
     assert.instanceOf(res, ToIntArraySample);
     assert.equal(res.userIds, null);
-    // assert.lengthOf(res.userIds, 0);
   });
-
+  //
   it('should ToIntArraySample 2', () => {
     const res = transformer.transform(ToIntArraySample, {
       userIds: [1, 2, 3],
@@ -141,7 +143,7 @@ describe('index.spec.ts', () => {
     assert.instanceOf(res.userIds, Array);
     assert.lengthOf(res.userIds, 1);
   });
-
+  //
   it('should ToIntSetSample', () => {
     const res = transformer.transform(ToIntSetSample, {
       userIds: [1],

@@ -360,7 +360,7 @@ var ToStringPlugin = (function (_super) {
                                     type: rule.type,
                                     message: rule.message,
                                     validator: function (value) {
-                                        return validator_1.default.isRgbColor(value, rule.includePercentValues);
+                                        return validator_1.default.isRgbColor(value, { includePercentValues: rule.includePercentValues });
                                     },
                                 });
                                 break;

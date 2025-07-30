@@ -359,7 +359,7 @@ export class ToStringPlugin extends TransformPlugin {
                   type: rule.type,
                   message: rule.message,
                   validator: (value) =>
-                    validator.isRgbColor(value, rule.includePercentValues),
+                    validator.isRgbColor(value, {includePercentValues: rule.includePercentValues}),
                 });
                 break;
               case 'range':

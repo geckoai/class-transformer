@@ -49,6 +49,7 @@ export declare class ClassTransformer {
      * @param options 实例选项参数
      */
     newInstance<T extends {}>(targetType: ClassConstructor<T>, options?: ClassTransformerOptions): T;
+    ignoreWarn: boolean;
     /**
      * 创建实例
      * @param options 实例选项参数

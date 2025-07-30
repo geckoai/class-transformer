@@ -33,6 +33,7 @@ Object.values(plugins).forEach(function (o) { return allPlugins.set(o.type, o); 
 var ClassTransformer = (function () {
     function ClassTransformer(options) {
         this.options = options;
+        this.ignoreWarn = false;
     }
     ClassTransformer.register = function (plugin) {
         allPlugins.set(plugin.type, plugin);

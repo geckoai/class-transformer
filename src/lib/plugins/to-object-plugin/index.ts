@@ -30,7 +30,6 @@ import {
   ValidateExceptionFields,
 } from '../../exceptions';
 import { validate } from '../../validate';
-import * as process from 'node:process';
 
 /**
  * Object转换插件
@@ -100,16 +99,11 @@ export class ToObjectPlugin extends TransformPlugin {
           !this.transformer.ignoreWarn &&
           !metadata.options?.ignoreWarn
         ) {
-          if (
-            process?.env?.NODE_ENV &&
-            process.env.NODE_ENV === 'development'
-          ) {
-            console.warn(
-              `Member ${propertyKey.toString()} of class ${
-                type.name
-              } contains multiple decorators.`
-            );
-          }
+          console.warn(
+            `The class ${
+              type.name
+            }.${propertyKey.toString()} contains multiple decorators.`
+          );
         }
 
         if (metadata) {

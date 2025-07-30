@@ -67,8 +67,14 @@ var ToObjectPlugin = (function (_super) {
                 value = newInstance[propertyKey];
             }
             var allDecorates = propertyMirror.getAllDecorates(typed_decorate_1.TypedDecorate);
-            allDecorates.forEach(function (decorate) {
+            allDecorates.forEach(function (decorate, i) {
+                var _a;
                 var metadata = decorate.metadata;
+                if (i > 0 &&
+                    !_this.transformer.ignoreWarn &&
+                    !((_a = metadata.options) === null || _a === void 0 ? void 0 : _a.ignoreWarn)) {
+                    console.warn("The class ".concat(type.name, ".").concat(propertyKey.toString(), " contains multiple decorators."));
+                }
                 if (metadata) {
                     var options = metadata.options;
                     if (options) {

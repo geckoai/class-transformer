@@ -192,10 +192,12 @@ export type Rule = UUIDRule | UrlRule | RgbColorRule | NumericRule | PassportNum
 export interface TypedMetadataOptions<T = any> {
     /**
      * 严格转换类型 当值为null或者undefined，为true时会被严格转换为指定的类型
+     * Strictly convert the type value to null or undefined. When it is true, it will be strictly converted to the specified type
      */
     strict?: boolean;
     /**
      * 字段别名 转换时如果优先从别名字段取值
+     * When converting field aliases, prioritize taking values from alias fields
      */
     alias?: string;
     /**
@@ -204,23 +206,33 @@ export interface TypedMetadataOptions<T = any> {
     rules?: Rule | Rule[] | string | string[];
     /**
      * 成员类型 Map ｜ Set ｜ Promise ｜ Array 等验证成员类型
+     * Verify member types such as Map | Set | Promise | Array, etc
      */
     elementRules?: Rule | Rule[] | string | string[];
     /**
      * 字段描述
+     * Field Description
      */
     description?: string;
     /**
      * 转换函数
+     * transformer function
      * @param values
      */
     transform?: (values: any, allValues: any) => T | undefined;
     /**
      * 是否可为null 默认false
+     * Can it be null? Default false
      */
     nullable?: boolean;
     /**
      * 字段是否必须，非必须则允许undefined 默认允许, 为string时required为true，同时作为验证消息
+     * Is the field required? If it is not required, undefined is allowed by default. If it is a string, required is true, and it is also used as a verification message
      */
     required?: string | true;
+    /**
+     * 忽略当前字段在控制台的警告消息
+     * Ignore warning messages for the current field in the console
+     */
+    ignoreWarn?: boolean;
 }
